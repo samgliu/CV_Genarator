@@ -1,0 +1,14 @@
+button {
+    border: none;
+    cursor: pointer;
+    background-color: #f3f3f3;
+}
+button:hover {
+    background-color: #e9e7e7;
+}
+
+@media print {
+    button {
+        display: none;
+    }
+}
