@@ -139,6 +139,7 @@ class App extends Component {
 
     onCarAddClick(theid, time, cname, pos, des) {
         let newCars = this.state.career;
+
         newCars.push({
             id: theid,
             text: {
@@ -150,7 +151,7 @@ class App extends Component {
             editing: false,
         });
         this.setState({
-            education: newCars,
+            career: newCars,
         });
     }
 
@@ -178,7 +179,7 @@ class App extends Component {
             }
         });
         this.setState({
-            education: newCars,
+            career: newCars,
         });
     }
 
@@ -226,10 +227,11 @@ class App extends Component {
             }
         });
         this.setState({
-            education: newCars,
+            career: newCars,
         });
         this.dodgeSkillEdition(theid);
     }
+
     saveEduEdition(theid, time, school, major) {
         let newEdus = this.state.education;
         newEdus.forEach((edu) => {
