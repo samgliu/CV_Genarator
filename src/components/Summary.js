@@ -1,27 +1,65 @@
 import React from "react";
+import uniqid from "uniqid";
 
 const Summary = (props) => {
-    function EditSummary() {
-        console.log("EditSummary");
+    const { status, summary } = props;
+
+    function renderNormal() {
+        return (
+            <div>
+                <h3>
+                    Summary
+                    <button
+                        type="button"
+                        onClick={() => {
+                            props.dodgeAddingStatus("summary");
+                        }}
+                    >
+                        ✎
+                    </button>
+                </h3>
+                {summary.text}
+            </div>
+        );
     }
-    return (
-        <div>
-            <h3>
-                Summary
-                <button
-                    type="button"
-                    onClick={() => {
-                        EditSummary();
+
+    function renderForm(summary) {
+        let input = summary.text;
+        return (
+            <div key={uniqid()}>
+                <h3>
+                    Summary
+                    <button
+                        type="button"
+                        onClick={() => {
+                            props.saveSummary(input);
+                        }}
+                    >
+                        ✔
+                    </button>
+                </h3>
+                <textarea
+                    className="summaryinputbox"
+                    type="text"
+                    rows="5"
+                    defaultValue={input}
+                    onChange={(event) => {
+                        input = event.target.value;
                     }}
-                >
-                    &#9998;
-                </button>
-            </h3>{" "}
-            <br />
-            {props.summary} <br />
-            <br />
-        </div>
-    );
+                />
+            </div>
+        );
+    }
+
+    function renderSection(summary) {
+        if (!status.summary) {
+            return renderNormal(summary);
+        } else {
+            return renderForm(summary);
+        }
+    }
+
+    return <div>{renderSection(summary)}</div>;
 };
 
 export default Summary;

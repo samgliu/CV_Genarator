@@ -1,3 +1,7 @@
+body {
+    font-family: Calibri;
+    margin: 20px 20px 20px 20px;
+}
 button {
     border: none;
     cursor: pointer;
@@ -6,9 +10,30 @@ button {
 button:hover {
     background-color: #e9e7e7;
 }
+li {
+    margin-bottom: 0.5em;
+}
 
 @media print {
+    h1 {
+        display: none;
+    }
     button {
         display: none;
     }
+    input {
+        display: none;
+    }
+    textarea {
+        display: none;
+    }
+}
+.skillinpubox {
+    width: 5em;
+}
+.midinputbox {
+    width: 10.5em;
+}
+.summaryinputbox {
+    width: 90%;
 }
