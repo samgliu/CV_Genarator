@@ -7,7 +7,6 @@ import Skill from "./components/Skill";
 import "./styles/index.css";
 import uniqid from "uniqid";
 import Line from "./components/Line";
-import { View } from "react-native";
 
 class App extends Component {
     constructor() {
