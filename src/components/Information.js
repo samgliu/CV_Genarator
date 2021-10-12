@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Information = (props) => {
     const { status, info } = props;
@@ -11,7 +11,7 @@ const Information = (props) => {
                     <button
                         type="button"
                         onClick={() => {
-                            props.dodgeAddingStatus("information");
+                            props.dodgeAddingStatus('information');
                         }}
                     >
                         ✎
@@ -45,7 +45,7 @@ const Information = (props) => {
                 </h3>
                 Name:&nbsp;
                 <input
-                    className="skillinpubox"
+                    className="skillinputbox"
                     type="text"
                     defaultValue={fn}
                     onChange={(event) => {
@@ -53,7 +53,7 @@ const Information = (props) => {
                     }}
                 />
                 <input
-                    className="skillinpubox"
+                    className="skillinputbox"
                     type="text"
                     defaultValue={ln}
                     onChange={(event) => {

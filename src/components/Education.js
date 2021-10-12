@@ -1,5 +1,5 @@
-import React from "react";
-import uniqid from "uniqid";
+import React from 'react';
+import uniqid from 'uniqid';
 
 const Education = (props) => {
     const { edus, status } = props;
@@ -93,7 +93,7 @@ const Education = (props) => {
                 <button
                     type="button"
                     onClick={() => {
-                        props.dodgeAddingStatus("education");
+                        props.dodgeAddingStatus('education');
                     }}
                 >
                     ✚
@@ -144,7 +144,7 @@ const Education = (props) => {
                             if (school !== undefined) {
                                 props.onEduAddClick(theid, time, school, major);
                             } else {
-                                props.dodgeAddingStatus("education");
+                                props.dodgeAddingStatus('education');
                             }
                         }}
                     >
@@ -153,7 +153,7 @@ const Education = (props) => {
                     <button
                         type="button"
                         onClick={() => {
-                            props.dodgeAddingStatus("education");
+                            props.dodgeAddingStatus('education');
                         }}
                     >
                         ✖

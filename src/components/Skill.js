@@ -1,5 +1,5 @@
-import React from "react";
-import uniqid from "uniqid";
+import React from 'react';
+import uniqid from 'uniqid';
 
 const Skill = (props) => {
     const { skills, status } = props;
@@ -9,7 +9,7 @@ const Skill = (props) => {
         return (
             <span key={skill.id}>
                 <input
-                    className="skillinpubox"
+                    className="skillinputbox"
                     type="text"
                     defaultValue={input}
                     onChange={(event) => {
@@ -70,7 +70,7 @@ const Skill = (props) => {
                 <button
                     type="button"
                     onClick={() => {
-                        props.dodgeAddingSkill("skills");
+                        props.dodgeAddingSkill('skills');
                     }}
                 >
                     ✚
@@ -87,7 +87,7 @@ const Skill = (props) => {
                 Skill&nbsp;
                 <span key={theid}>
                     <input
-                        className="skillinpubox"
+                        className="skillinputbox"
                         type="text"
                         defaultValue={input}
                         onChange={(event) => {
@@ -100,7 +100,7 @@ const Skill = (props) => {
                             if (input !== undefined) {
                                 props.onSkillAddClick(theid, input);
                             } else {
-                                props.dodgeAddingSkill("skills");
+                                props.dodgeAddingSkill('skills');
                             }
                         }}
                     >
@@ -109,7 +109,7 @@ const Skill = (props) => {
                     <button
                         type="button"
                         onClick={() => {
-                            props.dodgeAddingSkill("skills");
+                            props.dodgeAddingSkill('skills');
                         }}
                     >
                         ✖
